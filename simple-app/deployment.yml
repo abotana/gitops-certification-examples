@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: simple-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: trivial-go-web-app
@@ -14,7 +14,7 @@ spec:
         app: trivial-go-web-app
     spec:
       containers:
-      - name: webserver-simplesimple
+      - name: webserver-simple
         image: docker.io/kostiscodefresh/gitops-simple-app:v2.0
         ports:
         - containerPort: 8080
